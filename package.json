@@ -1,0 +1,17 @@
+{
+  "name": "clothify-ecommerce",
+  "version": "1.0.0",
+  "description": "Full-stack e-commerce clothing store",
+  "main": "index.js",
+  "scripts": {
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "cd frontend && npm install",
+    "install-all": "npm run install-backend && npm run install-frontend",
+    "dev-backend": "cd backend && npm start",
+    "dev-frontend": "cd frontend && npm start",
+    "seed": "cd backend && npm run seed"
+  },
+  "keywords": ["ecommerce", "clothing", "react", "nodejs", "mongodb"],
+  "author": "Om Pansare",
+  "license": "ISC"
+}
