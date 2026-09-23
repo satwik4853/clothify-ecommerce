@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontend/$1"
+    }
+  ],
+  "env": {
+    "MONGO_URI": "mongodb+srv://ompansare103_db_user:XORgAxGsaixMRrtE@cluster0.rvoi03n.mongodb.net/clothify?retryWrites=true&w=majority&appName=Cluster0",
+    "JWT_SECRET": "clothify_super_secret_jwt_key_2024",
+    "JWT_EXPIRE": "30d",
+    "NODE_ENV": "production"
+  }
+}
